@@ -1,0 +1,32 @@
+//
+// Core.hpp for B-arena in /home/de-mat_a/rendu/B-arena/server-cpp/incs
+// 
+// Made by François De Matos
+// Login   <de-mat_a@epitech.net>
+// 
+// Started on  Mon Jul 13 17:20:03 2015 François De Matos
+// Last update Mon Jul 13 17:20:06 2015 François De Matos
+//
+
+#ifndef		CORE_HPP_
+# define	CORE_HPP_
+
+#include	<string>
+#include	<iostream>
+
+class		Core {
+private:
+  int		port;
+  int		maxfd;
+  fd_set	fdset;
+
+public:
+  Core(void);
+  ~Core(void);
+
+  void		connect();
+  void		addClient();
+  void		readClient();
+};
+
+#endif		/* !CORE_HPP_ */
